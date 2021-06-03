@@ -62,10 +62,14 @@ class Delimiter {
    * @private
    */
   drawView() {
-    let div = document.createElement('HR');
-
-    div.classList.add(this._CSS.wrapper, this._CSS.block);
-
+    let hr = document.createElement('HR');
+    let div = document.createElement('DIV');
+  
+    hr.classList.add(this._CSS.wrapper);
+    div.classList.add(this._CSS.block);
+  
+    div.appendChild(hr)
+    
     return div;
   }
 
